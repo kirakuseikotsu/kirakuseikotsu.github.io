@@ -1,9 +1,17 @@
-const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('.global-nav');
-if (menuButton && navigation) {
-  menuButton.addEventListener('click', () => {
-    const isOpen = navigation.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(isOpen));
-    menuButton.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.global-nav');
+  if (!toggle || !nav) return;
+  toggle.addEventListener('click', function () {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
   });
-}
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'メニューを開く');
+    });
+  });
+});
