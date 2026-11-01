@@ -5,12 +5,20 @@
 
 
 /* Real clinic photos and official LINE QR panels */
+.clinic-gallery { background: #f7faf6; }
+.clinic-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 30px; }
+.clinic-photo-grid figure { margin: 0; overflow: hidden; border-radius: 16px; background: #fff; box-shadow: 0 8px 24px rgba(34, 75, 44, .09); }
+.clinic-photo-grid img { display: block; width: 100%; height: 300px; object-fit: cover; }
+.clinic-photo-grid figure:first-child img { object-position: center; }
+.clinic-photo-grid figcaption { padding: 13px 16px; color: #315b3b; font-weight: 700; text-align: center; }
 .line-section { padding-top: 54px; padding-bottom: 54px; }
 .line-panel { display: flex; align-items: center; justify-content: space-between; gap: 28px; max-width: 900px; margin: 0 auto; padding: 28px 34px; border: 1px solid #cfe2ce; border-radius: 18px; background: #f5fbf3; }
 .line-panel h2 { margin: 6px 0 10px; color: #285b36; }
 .line-panel p:last-child { margin-bottom: 0; line-height: 1.8; }
 .line-qr { display: block; width: 190px; height: 190px; flex: 0 0 190px; object-fit: contain; padding: 8px; border-radius: 12px; background: #fff; }
 @media (max-width: 700px) {
+  .clinic-photo-grid { grid-template-columns: 1fr; gap: 16px; }
+  .clinic-photo-grid img { height: auto; max-height: 420px; object-fit: cover; }
   .line-panel { flex-direction: column; text-align: center; padding: 24px 18px; }
   .line-qr { width: 180px; height: 180px; flex-basis: 180px; }
 }
