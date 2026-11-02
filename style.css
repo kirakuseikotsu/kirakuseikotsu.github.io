@@ -28,3 +28,37 @@
 @media (max-width: 700px) {
   .hero { background-position: 58% center; padding: 76px 0 72px; }
 }
+
+
+/* Photo-backed section headers: clinic sign and waiting room */
+.access-page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  text-align: left;
+  background: linear-gradient(90deg, rgba(250,253,249,.98) 0%, rgba(250,253,249,.94) 34%, rgba(250,253,249,.58) 58%, rgba(250,253,249,.10) 100%), url('./clinic-sign.jpeg') center 48% / cover no-repeat;
+  padding: 78px 0;
+}
+.access-page-hero .container { position: relative; z-index: 1; }
+.access-page-hero h1 { max-width: 560px; }
+.access-page-hero p:last-child { max-width: 520px; color: #53675a; }
+.features-section {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(90deg, rgba(248,252,247,.96) 0%, rgba(248,252,247,.88) 42%, rgba(248,252,247,.62) 100%), url('./waiting-room.jpeg') center 52% / cover no-repeat;
+}
+.features-section .section-heading {
+  padding: 24px 28px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(5px);
+}
+.features-section .feature-card {
+  background: rgba(255,255,255,.91);
+  backdrop-filter: blur(4px);
+}
+@media (max-width: 760px) {
+  .access-page-hero { padding: 52px 0; background-position: 58% center; background-image: linear-gradient(90deg, rgba(250,253,249,.96), rgba(250,253,249,.78)), url('./clinic-sign.jpeg'); }
+  .features-section { background-position: 62% center; background-image: linear-gradient(180deg, rgba(248,252,247,.91), rgba(248,252,247,.82)), url('./waiting-room.jpeg'); }
+  .features-section .section-heading { padding: 18px 14px; }
+}
