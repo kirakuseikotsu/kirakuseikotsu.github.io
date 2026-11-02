@@ -62,3 +62,34 @@
   .features-section { background-position: 62% center; background-image: linear-gradient(180deg, rgba(248,252,247,.91), rgba(248,252,247,.82)), url('./waiting-room.jpeg'); }
   .features-section .section-heading { padding: 18px 14px; }
 }
+
+
+/* Price page: supplied soft watercolor background from treatment details through phone contact */
+.price-details-section {
+  background-image: linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.18)), url('./施術料金ページ背景.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.price-details-section .notice,
+.price-details-section .price-block,
+.price-details-section .center-action {
+  background-color: rgba(255,255,255,.88);
+  backdrop-filter: blur(3px);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(55, 83, 65, .07);
+}
+.price-details-section .notice { border-color: rgba(196,218,201,.85); }
+.price-details-section .price-block { border-color: rgba(196,218,201,.85); }
+.price-details-section .center-action { margin-top: 22px; padding: 22px 18px; }
+@media (max-width: 760px) {
+  .price-details-section {
+    background-position: center top;
+    background-size: auto 100%;
+  }
+  .price-details-section .notice,
+  .price-details-section .price-block,
+  .price-details-section .center-action {
+    background-color: rgba(255,255,255,.92);
+  }
+}
