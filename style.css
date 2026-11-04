@@ -93,3 +93,118 @@
     background-color: rgba(255,255,255,.92);
   }
 }
+
+
+/* Director / staff introduction */
+.staff-section {
+  background: linear-gradient(180deg, #f5faf5 0%, #edf5ef 100%);
+}
+.staff-profile {
+  display: grid;
+  grid-template-columns: minmax(260px, .85fr) minmax(0, 1.15fr);
+  gap: 38px;
+  align-items: stretch;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #dce9de;
+  border-radius: 20px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 10px 30px rgba(34,75,44,.08);
+}
+.staff-photo {
+  min-height: 330px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #e7f1e8, #f7f4e9);
+  border: 1px dashed #a9c5ad;
+}
+.staff-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #54765c;
+  text-align: center;
+}
+.staff-photo-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.8);
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+.staff-photo-placeholder strong { font-size: 1.08rem; }
+.staff-photo-placeholder small { font-size: .82rem; color: #718675; }
+.staff-details { align-self: center; }
+.staff-role {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: #eaf3eb;
+  color: #315b3b;
+  font-size: .85rem;
+  font-weight: 700;
+}
+.staff-details h3 {
+  margin: 0 0 22px;
+  color: #294b37;
+  font-size: 1.55rem;
+}
+.staff-bio, .staff-message {
+  padding: 17px 0;
+  border-top: 1px solid #e2ebe3;
+}
+.staff-bio h4, .staff-message h4 {
+  margin: 0 0 8px;
+  color: #315b3b;
+  font-size: 1rem;
+}
+.staff-bio p, .staff-message p {
+  margin: 0;
+  color: #59695d;
+  line-height: 1.9;
+}
+@media (max-width: 760px) {
+  .staff-profile {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 18px;
+  }
+  .staff-photo { min-height: 260px; }
+  .staff-details h3 { font-size: 1.35rem; }
+}
+
+
+/* Director qualifications */
+.staff-qualifications {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+.staff-qualifications li {
+  position: relative;
+  padding: 12px 16px 12px 42px;
+  border: 1px solid #dce9de;
+  border-radius: 10px;
+  background: #f5faf5;
+  color: #315b3b;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.staff-qualifications li::before {
+  content: "✓";
+  position: absolute;
+  left: 16px;
+  color: #6b9873;
+  font-weight: 700;
+}
