@@ -118,16 +118,8 @@
   display: grid;
   place-items: center;
   border-radius: 15px;
-  background: #f3f3ef;
-}
-.staff-photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 330px;
-  object-fit: cover;
-  object-position: center 30%;
-  border-radius: inherit;
+  background: linear-gradient(145deg, #e7f1e8, #f7f4e9);
+  border: 1px dashed #a9c5ad;
 }
 .staff-photo-placeholder {
   display: flex;
@@ -216,3 +208,17 @@
   color: #6b9873;
   font-weight: 700;
 }
+
+
+/* Staff hobby and menu descriptions */
+.staff-hobby { margin: 22px 0 0; padding: 16px 0; border-top: 1px solid #e2ebe3; }
+.staff-hobby h4 { margin: 0 0 6px; color: #315b3b; font-size: 1rem; }
+.staff-hobby p { margin: 0; color: #59695d; font-weight: 600; }
+.price-subsection { padding-top: 18px; }
+.price-subsection + .price-subsection { margin-top: 20px; border-top: 1px solid var(--line); }
+.price-subsection h3 { margin: 0 0 6px; color: var(--green-dark); font-size: 1.08rem; }
+.menu-price-row { align-items: center; }
+.menu-price-info { min-width: 0; }
+.menu-name { font-weight: 700; color: var(--text); }
+.menu-description { margin: 3px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.6; }
+@media (max-width: 760px) { .menu-price-row { flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 12px; } .menu-price-row strong { white-space: nowrap; text-align: right; } .menu-description { max-width: 28em; } }
