@@ -121,6 +121,15 @@
   background: linear-gradient(145deg, #e7f1e8, #f7f4e9);
   border: 1px dashed #a9c5ad;
 }
+.staff-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: inherit;
+}
 .staff-photo-placeholder {
   display: flex;
   flex-direction: column;
@@ -222,3 +231,7 @@
 .menu-name { font-weight: 700; color: var(--text); }
 .menu-description { margin: 3px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.6; }
 @media (max-width: 760px) { .menu-price-row { flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 12px; } .menu-price-row strong { white-space: nowrap; text-align: right; } .menu-description { max-width: 28em; } }
+
+/* Treatment duration labels */
+.menu-duration { margin: 2px 0 0; color: var(--green-dark); font-size: .82rem; font-weight: 600; }
+.treatment-time-note { margin: 10px 0 2px; padding: 10px 14px; background: #f1f7f1; border-radius: 8px; color: var(--green-dark); font-weight: 600; font-size: .92rem; }
